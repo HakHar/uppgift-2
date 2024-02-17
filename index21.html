@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppgift 2</title>
+
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>   
+    <header>
+    <div class="Title">
+               <h1>- F4. Layout -</h1>
+               <div class ="fråga"> - FRÅGA_1 -</div>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="index21.html">Fråga_1 / F4. Layout</a></li>
+            <li><a href="index22.html">Fråga_2 / F5. Navigering</a></li>
+            <li><a href="index23.html">Fråga_3 / F6. Målgruppsanalys och kravspecifikation</a></li>
+        </ul>
+    </div>
+</header>
+      
+
+<h2>F4. Layout</h2>
+    <h3><b>Delfråga 1:</b> 1. Förklara vad CSS-egenskaperna justify-content respektive align-items har för effekt när man använder flexbox för layout.</h3>
+    
+    
+    
+    <div class="fråga2"> 
+    <h4>justify-content:</h4>
+    
+    <p>Egenskapen riktar in flexelement inuti en flexbehållare längs huvudaxeln.
+    <br>När man arrangerar flexobjekt i rad styr egenskapen den horisontella justeringen. Justera vertikalt när man placerar i en kolumn.
+    <br>Exempel
+    <br><br><b>.container {</b>
+       <br><b> display: flex;</b>
+       <br><b>justify-content: space-between;</b>
+      <br><b>}</b>
+     <br> 
+      <br>Den koden kommer att tvinga flexobjekten att spridas över hela förälderns bredd, och dela det tillgängliga utrymmet lika.
+      <br>Egenskapen justify-content ger en synlig effekt endast när det finns ledigt utrymme. Så om en uppsättning element tar upp allt utrymme på huvudaxeln, kommer justify-content att göra ingenting.
+      <br>Om man ställer in justify-content till flex-end kommer alla element att flyttas till slutet av raden. Det lediga utrymmet kommer att vara i början.
+      <br>Om man ställer in justify-content till flex-start får alla flexobjekt att radas upp i början av raden. I vänster-till-höger-skrift grupperas element till vänster.
+      <br>Man kan göra andra saker med det här utrymmet. Till exempel, fördela det mellan de element med hjälp av justify-content: space-between. I det här fallet kommer det första och sista elementet att placeras i ändarna av behållaren, och hela utrymmet kommer att delas lika mellan elementen.
+      <br>Man kan allokera utrymme med hjälp av justify-content: space-around. I det här fallet delas det tillgängliga utrymmet i lika delar och placeras på varje sida av elementet.
+      <br>Värdena fungerar på samma sätt vertikalt, det vill säga om flex-riktning tillämpas på kolumn. Men kolumnen kanske inte har ledigt utrymme för distribution om man inte lägger till höjden eller blockstorleken på behållaren,</p>
+    </div>  
+    <p><br></p>
+      <div class="fråga2">  
+      <h4>align-content: <br>Axelinriktning med hjälp <br>av align-content </h4>
+      <p> Om behållaren har flera axlar och flex-wrap: wrap specificeras, kan align-content användas för att rikta in raderna på tväraxeln. Men ytterligare utrymme krävs.
+      <br>I Box Alignment-specifikationen kan man hitta place-content egenskapen. Att använda den här egenskapen innebär att man ställer in justify-content och align-content samtidigt. Det första värdet är för align-content, det andra är för justify-content. Om endast ett värde anges gäller det båda egenskaperna:
+      <br>Egenskapen align-items anger justeringen av alla element samtidigt. I själva verket ställer den in align-self-värdena för alla delar av gruppen. Man kan också använda egenskapen align-self på ett enskilt element för att justera det inom en linje och i förhållande till andra element.
+      <br>Vid flex-start, Flexer är inriktade i början av behållarens tvärgående axel. 
+      <br>Vid center, Flexer är inriktade längs den tvärgående axeln.
+      <br>Vid flex-end, Böjningarna är inriktade vid änden av behållarens tvärgående axel.
+      <br>Vid stretch, Flexer sträcks på ett sådant sätt att de upptar allt tillgängligt utrymme i behållaren.
+      <br>Vid baseline, Flexer är anpassade till sin baslinje.</p>
+    </div>  
+    
+<h3><b>Delfråga 2:</b> 	2.Vad är en media query och vad använd   </h3>
+    <p>När man skapar en webbsidadesign måste du ta hänsyn till att den kommer att visas från olika enheter: telefoner, surfplattor, bärbara datorer, stationära datorer och kanske till och med TV-apparater.</p>
+    <p>För att formatera webbplatsinnehåll för olika skärmar användes CSS media query. Tack vare dessa frågor behöver man i de flesta fall inte ens dyka djupt in i HTML-koden</p>
+    <p>media query, är en uppsättning regler (frågor) som låter anpassa utseendet på en webbsida till de tekniska parametrarna för användarens enhet: skärmbredd och höjd, pixeltäthet, antal färger som stöds och så vidare.</p> 
+    <p>Varje media query är ett villkor som är inställt på en viss stil. Om villkoret är uppfyllt så tillämpas stilen, om inte så tillämpas den inte. Med hjälp av frågor kan man alltså skriva flera stilar samtidigt med sina egna förutsättningar för olika situationer. Till exempel för olika användarskärmbredder.</p>
+    <p>Exampel på olika operatorn:</p>
+    <p>Operatorn "and" används som en logisk AND(och). Frågan exekveras endast om vart och ett av villkoren är sant. T.ex om bredden på webbläsarfönstret är större än 480 px OCH mindre än 1024 px - det vill säga någonstans mellan dessa värden.</p>   
+    <p>Operatorn "or" används som ett logiskt or (ELLER). Resultatet av en mediefråga är sant om minst ett av villkoren är sant. </p>
+      <p>Operatorn "not" används som en logisk NOT. </p>
+      <p>Den "only" operatören behövs för att skydda sig från felaktig funktion av vissa äldre webbläsare som läser CSS2-syntax istället för CSS3.</p>
+      <p>Mediefrågor låter att fråga användaren om enhetstyp och egenskaper. Om mottagna data motsvarar förväntade data, tillämpas designen.</p>
+      <p>Om flera villkor måste uppfyllas samtidigt för en stil, kan de kombineras med logiska operatorer: or, and, not, kommatecken och only.</p>
+<img src="https://itvdn.blob.core.windows.net/cbs-images/cbs-images-dbbbf643-1744-4ff4-851a-05039a36e6b2.png" alt="">
+
+    
+
+
+<div id="id-block">Frågor</div>
+        <h4>F4. Layout</h4>
+        <p>1. Förklara vad CSS-egenskaperna justify-content respektive align-items har för effekt när man använder flexbox för layout.</p>
+        <p>2.Vad är en media query och vad används den till? </p>
+       
+       </body>
+</html>
